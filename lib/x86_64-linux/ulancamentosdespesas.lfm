@@ -1,0 +1,545 @@
+object frmLancamentosDespesas: TfrmLancamentosDespesas
+  Left = 502
+  Height = 464
+  Top = 151
+  Width = 400
+  BorderIcons = []
+  Caption = '.: Lançamento de despesas :.'
+  ClientHeight = 464
+  ClientWidth = 400
+  Font.Height = -15
+  Font.Name = 'Arial'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object pnlTop: TPanel
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 400
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 48
+    ClientWidth = 400
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object bbtnGravar: TBitBtn
+      Cursor = crHandPoint
+      Left = 220
+      Height = 48
+      Top = 0
+      Width = 90
+      Align = alRight
+      Caption = 'Gravar'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        000000000000000000000B9D25480FAD319812B035E913B637F413B637F412B0
+        35E90FAD31980B9D254800000000000000000000000000000000000000000000
+        0000099A22060D9E27BA19C140FF1FCE4CFF24DC58FF27DD5CFF27DD5CFF24DC
+        58FF1FCE4CFF19C140FF0D9E27BA099A22060000000000000000000000000B93
+        1E050DA128EA1ED04EFF21D454FF20D053FF04B62AFF18C440FF1DCE4AFF18C8
+        44FF20D151FF21D454FF1ED04EFF0DA128EA0B931E0500000000000000000B94
+        1DBA1ECE4DFF22D456FF15C948FF1CAC2FFF9DD2A1FF37AF46FF14C13BFF1FD2
+        4EFF1ECE4BFF1ECD4AFF20D253FF1ECE4DFF0B941DBA000000000B85114617BA
+        3FFF21D85AFF13C646FF12A826FFF2F4ECFFFFFFFFFFEAF2E6FF26AA38FF0DC0
+        39FF20D24FFF1ECE49FF1DCD4DFF20D758FF17BA3FFF0B851146088F189A18D1
+        52FF14CB4EFF0BA01EFFF2F4ECFFFFFBFFFFFFFAFFFFFFFFFFFFEAF2E6FF23A8
+        35FF0BC03AFF1ED359FF1CCF53FF1ED258FF18CF51FF088F189A1C972CE92DE1
+        72FF1BA82DFFF2F4ECFFFFF8FFFFEAF2E6FFA9D5A4FFEEF2EBFFFFFFFFFFD0EB
+        D3FF23A834FF0AC242FF18D662FF13CF54FF30E173FF1C982EE929A03CF765EA
+        A1FF58B25CFFEAF2E6FFEAF2E6FF0EB42FFF00BF30FF3AB649FFF2F4ECFFFFFF
+        FFFFEAF2E6FF23A833FF07C13DFF24D869FF73F0B1FF299D3BF71B9130F778F4
+        BCFF49CD7AFF74BF7FFF2DB64CFF24D367FF2ED872FF19CC5AFF48B558FFEAF2
+        E6FFFFFFFFFFEAF2E6FF26A731FF25D060FF77F6BEFF1B912EF71F882AE971F2
+        B5FF61E4A8FF4CDB95FF5BE1A5FF61DEA5FF63DDA4FF63E2ABFF4DDA96FF4FB8
+        60FFEEF2E8FFFFFFFFFFEAF2E6FF2AB343FF6DF0B3FF1F882AE90373019A86E3
+        B5FF62E7A9FF5DE2A4FF60E2A6FF5FE1A6FF5FE1A6FF5EE1A5FF63E5ADFF4CDA
+        95FF4DB75EFFEAF0E5FFFFFFFFFF61BC65FF80DFAEFF0373019A005F00464EB0
+        68FFA8FCE1FF5FE1A2FF57E09FFF5BE0A3FF5DE1A4FF5DE1A4FF5DE1A4FF61E5
+        ABFF4EDC97FF48BA60FF5DC270FF96EABFFF4EB068FF005F004600000000005C
+        00BA7BDBA7FFB0FCE8FF76E5B5FF62E3AAFF5EE0A6FF5EE1A6FF5EE1A6FF5EE0
+        A5FF66E6B0FF6FE3AFFFA7F9E0FF7ADCA8FF005C00BA00000000000000000068
+        0005006500EA6DD6A3FFB3FDF0FFA4F5DFFF8CE9C7FF8CE8C4FF8AE7C2FF8DE9
+        C6FFA5F5DEFFB3FDF0FF6DD6A3FF006500EA0068000500000000000000000000
+        0000005E0006005800BA38A75EFF7FE1B8FFA9FFECFFB9FFFBFFB9FFFBFFA9FF
+        ECFF7FE1B8FF38A75EFF005800BA005E00060000000000000000000000000000
+        00000000000000000000004E0048006800980F701FE91E812EF41E812EF40F70
+        1FE900680098004E004800000000000000000000000000000000
+      }
+      OnClick = bbtnGravarClick
+      ParentFont = False
+      TabOrder = 0
+    end
+    object bbtnCancelar: TBitBtn
+      Cursor = crHandPoint
+      Left = 310
+      Height = 48
+      Top = 0
+      Width = 90
+      Align = alRight
+      Caption = 'Cancelar'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000506
+        8B210504856D0404753A00000000000000000000000000000000000000000000
+        0000000000000000000003035C010B09B6E6040377830000000004046B140B07
+        BEF6110EFFFF0B09DDFF0303575C000000000000000000000000000000000000
+        000000000000000000000504809D110CFCFF04036585000000000F0D864D110F
+        DFFF0E0CFCFF100EFFFF0A08B3F802024C0C0000000000000000000000000000
+        00000000000003035D2E0D0CDCFF0D0BD6FF0303622A00000000040372392524
+        D7FF0F0EFBFF0E0EEFFF0F0FFAFF060587910000000000000000000000000000
+        000004037A090B09BAEF1313FFFF09079DE80000000000000000000000001615
+        A4D62627FFFF090AEEFF1214FAFF0F10DBFF0403832300000000000000000000
+        00000A09AEB81416FFFF1112E5FF05047F620000000000000000000000000000
+        811F272BC6FF252CFEFF0D0EEEFF161CFEFF0D0EC3D900000000000000000E0D
+        BD9F181DF9FF191EFEFF0B0BB9E9000000000000000000000000000000000000
+        00000401A456393FE0FF2531FAFF121CF6FF1B25F6FF0D07BB710F0EC57E1D26
+        F7FF1E2BFFFF151BE2FF0804A23E000000000000000000000000000000000000
+        0000000000000C08BB954C57F6FF2839F8FF1B2DF7FF1F29EEFF2131F6FF2236
+        F9FF1F2FF2FF0D07C79C00000000000000000000000000000000000000000000
+        000000000000000000001210CAAB5261F5FF293CF6FF253AF8FF263AF7FF2638
+        F6FF1310D6D30000000000000000000000000000000000000000000000000000
+        000000000000000000000C0BD67A2939F1FF2F45F8FF2338F6FF253EF8FF1F28
+        EAFF0B00D91E0000000000000000000000000000000000000000000000000000
+        00001611E944202AEEE7314CF9FF2B46F8FF253FF6FF4E69F9FF536EF9FF2341
+        F6FF1D24ECCD0D02EB0D000000000000000000000000000000000E03ED071C20
+        EFB6314CF6FF3656F8FF2F4AF6FF304FF6FF516EF9FF3A3CF1FC555CF4FF6B8A
+        FAFF385EF8FF1B27F2F10B00EB2C0000000000000000000000001A20F1B83B61
+        F8FF3A5AF7FF3150F7FF3D5FF7FF637DFAFF3234F5EE0200E8170700EB373536
+        F4F3778EFAFF6389FAFF2D45F5FF1416F27300000000000000004755F8FF4F76
+        F8FF3E61F8FF5679F8FF6279F9FF1F19F4BD0400EE0900000000000000000700
+        F110120AF198525AF8FF7F9CFAFF6B89FAFF3643F5D71611F2302623F2B7697B
+        F9FF6C82F9FF5055F6FF1006F17E000000000000000000000000000000000000
+        0000000000000300EF25110AF1A53839F5DC6B7EF8FF464BF6FA0F0AEF4B3132
+        F4D6393CF5D21C15F1AB0D03F10B000000000000000000000000000000000000
+        000000000000000000000600F01C1109F0682728F1B61F1EF2A7
+      }
+      OnClick = bbtnCancelarClick
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Height = 416
+    Top = 48
+    Width = 400
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 416
+    ClientWidth = 400
+    Color = clGradientActiveCaption
+    ParentColor = False
+    TabOrder = 1
+    object grbLancamento: TGroupBox
+      Left = 16
+      Height = 334
+      Top = 10
+      Width = 371
+      ClientHeight = 332
+      ClientWidth = 369
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+      object Label7: TLabel
+        Left = 14
+        Height = 13
+        Top = 6
+        Width = 104
+        Caption = 'Campo obrigatório!'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 7
+        Height = 13
+        Top = 6
+        Width = 4
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label3: TLabel
+        Left = 31
+        Height = 18
+        Top = 40
+        Width = 6
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label4: TLabel
+        Left = 38
+        Height = 18
+        Top = 40
+        Width = 123
+        Caption = 'Identificador BD.:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edtCodigo: TEdit
+        Left = 165
+        Height = 30
+        Top = 35
+        Width = 88
+        Alignment = taCenter
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        MaxLength = 100
+        NumbersOnly = True
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+        Text = '0'
+      end
+      object Label5: TLabel
+        Left = 14
+        Height = 18
+        Top = 80
+        Width = 6
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label8: TLabel
+        Left = 22
+        Height = 18
+        Top = 81
+        Width = 139
+        Caption = 'Categoria despesa.:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBLookupCbCategoria: TDBLookupComboBox
+        Left = 165
+        Height = 34
+        Top = 75
+        Width = 192
+        KeyField = 'CATEGORIA_DESPESAS_ID'
+        ListField = 'DESCRICAO'
+        ListFieldIndex = 0
+        ListSource = DataSourceCategoria
+        LookupCache = False
+        ScrollListDataset = True
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object Label9: TLabel
+        Left = 45
+        Height = 18
+        Top = 118
+        Width = 116
+        Caption = 'Status despesa.:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label10: TLabel
+        Left = 38
+        Height = 18
+        Top = 117
+        Width = 6
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object DBLookupCbStatus: TDBLookupComboBox
+        Left = 165
+        Height = 34
+        Top = 112
+        Width = 192
+        KeyField = 'STATUS_DESPESAS_ID'
+        ListField = 'DESCRICAO'
+        ListFieldIndex = 0
+        ListSource = DataSourceStatus
+        LookupCache = False
+        ScrollListDataset = True
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object GroupBox1: TGroupBox
+        Left = 14
+        Height = 73
+        Top = 152
+        Width = 343
+        Caption = 'Referência despesa (automático).:'
+        ClientHeight = 54
+        ClientWidth = 341
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 3
+        object Label11: TLabel
+          Left = 15
+          Height = 18
+          Top = 16
+          Width = 38
+          Caption = 'Ano.:'
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 8
+          Height = 18
+          Top = 16
+          Width = 6
+          Caption = '*'
+          Color = clWhite
+          Font.Color = clRed
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Transparent = False
+        end
+        object edtAno: TEdit
+          Left = 56
+          Height = 30
+          Top = 10
+          Width = 80
+          Alignment = taCenter
+          ReadOnly = True
+          TabOrder = 0
+          Text = '0'
+        end
+        object Label13: TLabel
+          Left = 160
+          Height = 18
+          Top = 16
+          Width = 6
+          Caption = '*'
+          Color = clWhite
+          Font.Color = clRed
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Transparent = False
+        end
+        object Label14: TLabel
+          Left = 167
+          Height = 18
+          Top = 16
+          Width = 38
+          Caption = 'Mês.:'
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtMes: TEdit
+          Left = 208
+          Height = 30
+          Top = 10
+          Width = 80
+          Alignment = taCenter
+          ReadOnly = True
+          TabOrder = 1
+          Text = '0'
+        end
+      end
+      object Label15: TLabel
+        Left = 15
+        Height = 18
+        Top = 246
+        Width = 6
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label16: TLabel
+        Left = 22
+        Height = 18
+        Top = 247
+        Width = 141
+        Caption = 'Descrição despesa.:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edtDescricao: TEdit
+        Left = 165
+        Height = 30
+        Top = 242
+        Width = 192
+        CharCase = ecUppercase
+        TabOrder = 4
+      end
+      object Label17: TLabel
+        Left = 22
+        Height = 18
+        Top = 288
+        Width = 141
+        Caption = 'Valor despesa (R$).:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label18: TLabel
+        Left = 15
+        Height = 18
+        Top = 288
+        Width = 6
+        Caption = '*'
+        Color = clWhite
+        Font.Color = clRed
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object edtValor: TEdit
+        Left = 165
+        Height = 30
+        Top = 281
+        Width = 115
+        Alignment = taCenter
+        TabOrder = 5
+        Text = '0.00'
+      end
+      object Label19: TLabel
+        Left = 136
+        Height = 13
+        Top = 16
+        Width = 149
+        Caption = '(Preenchido automaticamente)'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object pnlFooter: TPanel
+      Left = 0
+      Height = 50
+      Top = 366
+      Width = 400
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 50
+      ClientWidth = 400
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 1
+      object lblStatus: TLabel
+        Left = 16
+        Height = 23
+        Top = 16
+        Width = 81
+        Caption = 'lblStatus'
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object Label2: TLabel
+    Left = 18
+    Height = 18
+    Top = 10
+    Width = 6
+    Caption = '*'
+    Color = clWhite
+    Font.Color = clRed
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object ZQueryCategoria: TZQuery
+    Connection = DMPrincipal.ZConexaoPrincipal
+    SQL.Strings = (
+      'SELECT * FROM CATEGORIA_DESPESAS'
+    )
+    Params = <>
+    left = 56
+    top = 464
+  end
+  object DataSourceCategoria: TDataSource
+    DataSet = ZQueryCategoria
+    left = 168
+    top = 512
+  end
+  object ZQueryStatus: TZQuery
+    Connection = DMPrincipal.ZConexaoPrincipal
+    SQL.Strings = (
+      'SELECT * FROM STATUS_DESPESAS'
+    )
+    Params = <>
+    left = 56
+    top = 496
+  end
+  object DataSourceStatus: TDataSource
+    DataSet = ZQueryStatus
+    left = 168
+    top = 464
+  end
+end

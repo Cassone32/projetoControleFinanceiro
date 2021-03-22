@@ -1,0 +1,482 @@
+object frmManutencaoLancamentos: TfrmManutencaoLancamentos
+  Left = 372
+  Height = 540
+  Top = 141
+  Width = 900
+  Caption = '.: Formulário de manutenção de lançamentos :.'
+  ClientHeight = 540
+  ClientWidth = 900
+  Font.Height = -15
+  Font.Name = 'Arial'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object pnlFooter: TPanel
+    Left = 0
+    Height = 48
+    Top = 492
+    Width = 900
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 48
+    ClientWidth = 900
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object bbtnSair: TBitBtn
+      Cursor = crHandPoint
+      Left = 810
+      Height = 48
+      Top = 0
+      Width = 90
+      Align = alRight
+      Caption = 'Fechar'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000064000000640000000000000000000000FCFCFCFFFFFF
+        FFFFFFFCFCFCFCFCFCFFFFFFFFFFFFFCFCFCFFFFFF0082E50075DC006FDAA2CB
+        F2FEFEFEFCFCFCFFFFFFFCFCFCFFFFFF9C93827A705C5A513D5A513D5A513D5A
+        513D5C513A1F6FAB0086FD0074E3026FD95F513AFFFFFFFFFFFFFCFCFCFFFFFF
+        A09787887D67665C46665C46665C46665C46695C44237FC10083FA007EF8057F
+        F45C513AFFFFFFFFFFFFFCFCFCFCFCFCA09787887A64665A44665A44645A4464
+        5A44695A41237FBE0083F7007CF8037FF45C513AFCFCFCFFFFFFFFFFFFFFFFFF
+        A097876F9A71566F4C695A44665A44645A44695A41237FBE0083F7007CF8037F
+        F45C513AFFFFFFFFFFFFFFFFFFFFFFFFA596876D9A741CBD6B57714C695A4466
+        5A44695A41237FBE0083F7007CF8037FF45C513AFFFFFFFFFFFF19A95F19A95D
+        3B9B6143A86C1CBF6A1EBB6B55744D695A44695A41237FBE0083FA0079F8037C
+        F45C513AFCFCFCFEFEFE19A75D1DBB691BBB671EBC6A1CBA681CBC6A1EBC6850
+        7850695A41237FBE0B8AF6F8F2EB3594EF5C513AFFFFFFFCFCFC31C07939D889
+        36D58637D98A37D68A37D98A36D887587F58695A41237FBE0083FA0079F8037C
+        F45C513AFFFFFFFCFCFC31BE792FC0794BAC7455BA7F35D98A36D3875C7A5569
+        5A44695A41237FBE0083F7007CF8037FF45C513AFCFCFCFEFEFEFFFFFFFFFFFF
+        A3968477A47B37D5865D7753695A44665A44695A41237FBE0083F7007CF8037F
+        F45C513AFFFFFFFFFFFFFFFFFFFFFFFFA0978777A17A5B7451695A44665A4464
+        5A44695A41237FBE0083F7007CF8037FF45C513AFFFFFFFFFFFFFCFCFCFFFFFF
+        A09786887A64665A44665A44645A44645A44695A41237FBE0083F7007CF8037F
+        F45C513AFFFFFFFFFFFFFCFCFCFFFFFFA09786857A64645A44645A44645A4464
+        5A44665A41217CBE0083F7007EF8037CF45C513AFFFFFFFFFFFFFFFFFFFFFFFF
+        9D94838C816980755F80785F80785F80785F83755D2B87C90086FA007DF72483
+        DA61553EFFFFFFFFFFFFFCFCFCFFFFFFCFCBC390856E90857190857190857190
+        857193856C1B7FCD0075DE2D75B9948469807661FCFCFCFFFFFF
+      }
+      OnClick = bbtnSairClick
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object pnlHead: TPanel
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 900
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 48
+    ClientWidth = 900
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 1
+    object bbtnLancarDespesa: TBitBtn
+      Cursor = crHandPoint
+      Left = 0
+      Height = 48
+      Top = 0
+      Width = 150
+      Align = alLeft
+      Caption = 'Lançar despesa'
+      Enabled = False
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        20000000000000040000640000006400000000000000000000000A2B95FF021C
+        80FB0024973C1A66D8451766D121000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000092A927B0000
+        58FF4E9FDFFF4CBFF8FF1467D4FF0B30ADB20000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000A81338AAD
+        DCFFC3FFFFFF95EBFFFF58D0FDFF0773D9FF0C33AFD400000000000000000000
+        00000000000000000000000000000000000000000000000000000E42B14692BA
+        E5FFFFFFFFFF79DFFFFF0EA4EEFF0B6DD5FF0E7FE0FF1046BBDA000000000000
+        0000000000000000000000000000000000000000000000000000000000001C4A
+        BCB7DBFFFFFF06DFFAFF00C3FCFF119EEAFF1272D7FF0D80E1FF134BC0D30000
+        0000000000000000000000000000000000000000000000000000000000000016
+        A8B535B9E4FF0AFFFFFF00D8F6FF00C8FEFF119CEAFF1271D6FF0D7FDFFF154D
+        C2DA000000000000000000000000000000000000000000000000000000000000
+        00000B2EB4DA3AD2ECFF12FFFFFF00D9F6FF00C8FEFF119CEAFF1271D5FF0D80
+        DEFF1550C4D30000000000000000000000000000000000000000000000000000
+        000000000000102DB6D339D4EDFF12FFFFFF00D8F6FF00C8FEFF119CEAFF1271
+        D5FF0D7FDFFF1651C9DA00000000000000000000000000000000000000000000
+        000000000000000000001233B8DA3AD1ECFF0CFFFDFF00D9F6FF00C8FEFF119C
+        EAFF126FD5FF0C80DFFF1A5BCBD3000000000000000000000000000000000000
+        00000000000000000000000000001637BDD359F0F6FF07FFFBFF00D8F6FF00C8
+        FEFF119CEAFF1371D6FF0B7FE3FF0047CADA0000000000000000000000000000
+        000000000000000000000000000000000000294CC4DA67F6F8FF03FFFAFF00D8
+        F6FF00C8FEFF0EA9F7FF0052BEFF627590FF5684D3D300000000000000000000
+        000000000000000000000000000000000000000000002D4FC8D368F8F9FF05FF
+        FAFF00E6FFFF00A4E9FF627992FFFFFFE9FF7976B8FF0032CBCB000000000000
+        00000000000000000000000000000000000000000000000000002E53CADA66FF
+        FFFF00E9E1FF639AA3FFFFFFFCFF6B6FAAFF0000DDFF0D27EFFF000000000000
+        0000000000000000000000000000000000000000000000000000000000001E59
+        CFD380B6BCFFFFFFFCFF6D7CADFF0000DAFF0007FFFF0D26E8FF000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00004474E3DA84A6BCFF0C6CE2FF1458FFFF0B21EDFF1130E026000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000953D0C43FADF7F92982EDEE103AEA1F00000000
+      }
+      OnClick = bbtnLancarDespesaClick
+      ParentFont = False
+      TabOrder = 0
+    end
+    object bbtnAlterar: TBitBtn
+      Cursor = crHandPoint
+      Left = 150
+      Height = 48
+      Top = 0
+      Width = 150
+      Align = alLeft
+      Caption = 'Alterar despesa'
+      Enabled = False
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000B36F30E7A85B
+        1AF4823B0FF384380FF3A65216F3A15113F39D4D13F39C4912F39B4810F39A47
+        10F399470FF39A450EF692410FD99C4F170A0000000000000000C68C4DF8A55A
+        1AFF813008FFC3822DFFF1B740FFD48825FFF1A521FFE6981AFFE5A028FFDD99
+        23FFD9921EFFDE971AFFBF7214FF8A3C143C0000000000000000C28849F3A55A
+        1AFF812E06FFC48B37FFEBA435FF0A0F5EFF273360FF938362FFD48113FFE199
+        1EFFDA9929FFDB9B22FFC8831CFF944414330000000000000000C28849F3A55A
+        1AFF822F06FFBE8538FFFFC646FF714B3AFF79C2FFFF91EBFFFF3887C0FF8461
+        3CFFF59C12FFDEA12CFFC58120FF924314330000000000000000C28849F3A55A
+        1AFF822E05FFC1873DFFF5C658FFD48C2FFFF0E9E8FF6DEEFFFF06A4FFFF047B
+        F0FF8C6A3FFFFAA418FFCA8929FF904212330000000000000000C3884AF3A75B
+        1BFF832F04FFC38A41FFF0C35FFFF3A93AFFB2AE6AFF00FFFFFF00D0FDFF20A0
+        F1FF057BEEFF947443FFE78C11FFA04106340000000000000000C48B4DF3AC5E
+        1EFF873105FFC48E45FFF2C665FFE6B658FFF3A430FF92CA91FF00FFFFFF05D3
+        FDFF20A0F1FF077EF1FF7E502DFF834C242B0000000000000000C68D50F3B064
+        21FF893306FFC6914AFFF4CA6BFFE5B75BFFE9B85BFFFF9E27FF93CB93FF00FF
+        FFFF05D4FDFF23A3F2FF1776D1FF0071D8500000000000000000C89053F3B369
+        25FF8D3907FFC8924EFFF5CF72FFE7BA62FFE6B960FFEBBB5FFFFF9825FF92BB
+        88FF00FFFFFF06D3FEFF28A3EEFF0077E6FF68B6D13D00000000CA9357F3B66B
+        27FF8F3A0AFFCA9651FFF7D277FFE9BD67FFE9BC65FFE6BA62FFE9BE64FFFF9A
+        27FF92BB8BFF04FFFFFF00D8FFFF1A8BCAFFF4DEB1FF4F56D734CC9659F3B971
+        2BFF923D0CFFCC9954FFF9D77DFFEAC26CFFEAC06BFFE9BE67FFE7BE65FFECC2
+        66FFFF9B2AFF8BBD8AFF13E5FFFFFAF0D6FF9687D4FF000DEFFFCD9A5BF3BC75
+        2DFF96410BFFCD9B58FFFAD982FFECC671FFECC56FFFEBC26CFFEABF69FFE7BC
+        67FFEEC36BFFEB9827FFE5B57CFFA5C8FAFF002FEFFF1420F5CDD09C5DF3C279
+        2FFF9A440CFFCD9C5BFFFBDD87FFEEC977FFEEC875FFECC671FFECC36FFFEAC0
+        6BFFE9BF69FFF6CD6DFFDB8822F94094C9BD319FFFA81831F10AD19E5BF3C27B
+        2EFF9C440AFFCD9E5EFFFCDE8BFFEECA79FFEEC977FFEEC774FFECC571FFECC3
+        6EFFEAC069FFEEC871FFE6A040FFA26433170000000000000000D8A96AF8CA89
+        3AFFA34D0DFFD5AA6AFFFFEC9FFFF6D78EFFF6D78AFFF4D487FFF4D385FFF3D1
+        81FFF1CE7CFFF7D681FFE0B365FFBD55003D0000000000000000D29D59E7DFB5
+        71F4C2884CF3CE9B63F3E6C080F3DEB478F3DEB579F3DEB578F3DEB576F3DDB4
+        75F3DDB474F3E3B97AF6CF9954D9B86D260A0000000000000000
+      }
+      OnClick = bbtnAlterarClick
+      ParentFont = False
+      TabOrder = 1
+    end
+    object bbtnExcluir: TBitBtn
+      Cursor = crHandPoint
+      Left = 300
+      Height = 48
+      Top = 0
+      Width = 150
+      Align = alLeft
+      Caption = 'Excluir despesa'
+      Enabled = False
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        0000382D3380686164EC716A6BFF716A6BFF716A6BFF716A6BFF716A6BFF716A
+        6BFF716A6BFF716A6BFF686164F1382D33800000000000000000000000000000
+        00006C6065EDA2AFA5FFA2AFA5FFA2AFA5FFA2AFA5FFA2AFA5FFA2AFA5FFA2AF
+        A5FFA2AFA5FFA2AFA5FFA2AFA5FF6C6065EA0000000000000000000000000000
+        0000837B7FFFC9C5C7FF008036FF278E52FF36945CFFA9BEAFFF9BB9A5FF0080
+        36FF008036FF008036FFC9C5C7FF837B7FFF0000000000000000000000007D72
+        7773A19B9CFFE8E6E6FF049042FF48A872FFE0DFDDFFE0DFDDFFE0DFDDFFE0DF
+        DDFF64B286FF049042FFE8E6E6FFA19B9CFF7D72774400000000000000006356
+        5C89C9C5C7FFF0EEEDFF84D6AFFF26A863FFE1E8E3FFF0EEEDFFF0EEEDFFE1E8
+        E3FF17A359FF84D6AFFFF0EEEDFFC9C5C7FF63565C6900000000000000006356
+        5CB5E8E6E6FFFCFBF9FFEDF5F0FFFCFBF9FFEDF5F0FFFCFBF9FFFCFBF9FFDDF1
+        E6FFEDF5F0FFDFF1E6FFFCFBF9FFE8E6E6FF63565C9E00000000000000006C60
+        65E0FFFEFEFFFFFEFEFFFFFEFEFFFFFEFEFF0BAF60FFB3E6CCFFB3E6CCFF0BAF
+        60FFFFFEFEFFFFFEFEFFFFFEFEFFFFFEFEFF6C6065CF0000000000000000837B
+        7FF8F0EEEDFFF0EEEDFFF0EEEDFFF0EEEDFF23AD6CFF64B286FF64B286FF15A9
+        63FFE0E8E3FFF0EEEDFFF0EEEDFFF0EEEDFF837B7FEE00000000000000009F95
+        98FFDDDCDAFFDDDCDAFFDDDCDAFFDDDCDAFFDDDCDAFF019750FF019750FFDDDC
+        DAFFDDDCDAFFDDDCDAFFDDDCDAFFDDDCDAFF9F9598FF0000000000000000AAA2
+        A5FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8
+        C7FFCBC8C7FFCBC8C7FFCBC8C7FFCBC8C7FFAAA2A5FF0000000008610DEF0A79
+        1CFF0A791CFF0A791CFF0A791CFF0A791CFF0A791CFF0A791CFF0A791CFF0A79
+        1CFF0A791CFF0A791CFF0A791CFF0A791CFF0A791CFF036008EF1F8B36FF35C0
+        64FF35C064FF35C064FF35C064FF35C064FF35C064FF35C064FF35C064FF35C0
+        64FF35C064FF35C064FF35C064FF35C064FF35C064FF0D8326FF229B45FF41D4
+        8EFF41D48EFF41D48EFF41D48EFF41D48EFF41D48EFF41D48EFF41D48EFF41D4
+        8EFF41D48EFF41D48EFF41D48EFF41D48EFF41D48EFF0E9437FF1E933AEF239E
+        4DFF1C9646FF1A9040FF178B3CFF168739FF158638FF158638FF158638FF1586
+        38FF16883AFF178B3CFF1A9041FF1C9646FF1F9C4BFF129033EF000000000768
+        0EAF096F15FF086A14FF086512FF076311FF076211FF076211FF076211FF0762
+        11FF076412FF086713FF096B14FF096F15FF076B0FBF00000000000000000000
+        00000A74179A0A7417D00A7417F30A7417FF0A7417FF0A7417FF0A7417FF0A74
+        17FF0A7417FF0A7417ED0A7417C50A74178F0000000000000000
+      }
+      OnClick = bbtnExcluirClick
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Label4: TLabel
+      Left = 472
+      Height = 14
+      Top = 16
+      Width = 404
+      Caption = 'Para realizar o lançamento de despesa, selecione o mês de referência!'
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object pnlBody: TPanel
+    Left = 0
+    Height = 444
+    Top = 48
+    Width = 900
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 444
+    ClientWidth = 900
+    Color = clGradientActiveCaption
+    ParentColor = False
+    TabOrder = 2
+    object grbMesReferencia: TGroupBox
+      Left = 10
+      Height = 174
+      Top = 36
+      Width = 630
+      ClientHeight = 172
+      ClientWidth = 628
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+      object DBGridReferencias: TDBGrid
+        Left = 0
+        Height = 172
+        Top = 0
+        Width = 628
+        Align = alClient
+        AlternateColor = clAqua
+        BorderStyle = bsNone
+        Color = clWindow
+        Columns = <        
+          item
+            Alignment = taCenter
+            Font.Height = -15
+            Font.Name = 'Arial'
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'IDENTIFICADOR BD.:'
+            Width = 200
+            FieldName = 'REFERENCIA_LANCAMENTO_DESPESAS_ID'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'MÊS.:'
+            Width = 200
+            FieldName = 'MES'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'ANO.:'
+            Width = 200
+            FieldName = 'ANO'
+          end>
+        DataSource = DataSourceLancamentosAux
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 0
+        TitleFont.Height = -15
+        TitleFont.Name = 'Arial'
+      end
+    end
+    object Label1: TLabel
+      Left = 10
+      Height = 23
+      Top = 8
+      Width = 174
+      Caption = 'Mês de referência.:'
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object grbLancamentoMesReferencia: TGroupBox
+      Left = 10
+      Height = 174
+      Top = 256
+      Width = 878
+      ClientHeight = 172
+      ClientWidth = 876
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 1
+      object DBGridReferencias1: TDBGrid
+        Left = 0
+        Height = 172
+        Top = 0
+        Width = 876
+        Align = alClient
+        AlternateColor = clAqua
+        BorderStyle = bsNone
+        Color = clWindow
+        Columns = <        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'STATUS.:'
+            Width = 200
+            FieldName = 'STATUSDESPESA'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'DESCRIÇÃO DESPESA.:'
+            Width = 300
+            FieldName = 'DESCRICAOLANCAMENTO'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'VALOR.:'
+            Width = 100
+            FieldName = 'VALOR'
+            DisplayFormat = '#,###0.00'
+          end        
+          item
+            Alignment = taCenter
+            Font.Height = -15
+            Font.Name = 'Arial'
+            Title.Alignment = taCenter
+            Title.Font.Height = -15
+            Title.Font.Name = 'Arial'
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'TIPO DE DESPESA.:'
+            Width = 350
+            FieldName = 'TIPODESPESA'
+          end>
+        DataSource = DMPrincipal.DataSourceLancamentoReferencia
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 0
+        TitleFont.Height = -15
+        TitleFont.Name = 'Arial'
+      end
+    end
+    object Label2: TLabel
+      Left = 10
+      Height = 23
+      Top = 223
+      Width = 210
+      Caption = 'Lançamentos no mês.:'
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object grbSomatorias: TGroupBox
+      Left = 648
+      Height = 172
+      Top = 36
+      Width = 240
+      Caption = 'Somatórias.:'
+      ClientHeight = 153
+      ClientWidth = 238
+      Color = clWhite
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+      object pnlBodyGrbSomatorias: TPanel
+        Left = 0
+        Height = 153
+        Top = 0
+        Width = 238
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 153
+        ClientWidth = 238
+        TabOrder = 0
+        object Label3: TLabel
+          Left = 32
+          Height = 18
+          Top = 32
+          Width = 180
+          Caption = 'Valor total das despesas.:'
+          ParentColor = False
+        end
+        object edtValorDespesas: TEdit
+          Left = 36
+          Height = 30
+          Top = 56
+          Width = 176
+          Alignment = taCenter
+          ReadOnly = True
+          TabOrder = 0
+          Text = '0.00'
+        end
+      end
+    end
+  end
+  object DataSourceLancamentosAux: TDataSource
+    DataSet = DMPrincipal.ZQueryReferencia
+    OnDataChange = DataSourceLancamentosAuxDataChange
+    left = 88
+    top = 136
+  end
+  object TimerReferencia: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerReferenciaTimer
+    left = 488
+    top = 136
+  end
+  object TimerLancamento: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerLancamentoTimer
+    left = 488
+    top = 376
+  end
+end

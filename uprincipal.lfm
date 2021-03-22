@@ -1,0 +1,135 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 436
+  Height = 70
+  Top = 359
+  Width = 554
+  BorderStyle = bsSingle
+  Caption = '.:. Controle financeiro 1.0 .:.'
+  ClientHeight = 70
+  ClientWidth = 554
+  Font.Height = -15
+  Font.Name = 'Arial'
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object pnlCentral: TPanel
+    Left = 0
+    Height = 70
+    Top = 0
+    Width = 554
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 70
+    ClientWidth = 554
+    Color = clGradientActiveCaption
+    ParentColor = False
+    TabOrder = 0
+    object pnlFooter: TPanel
+      Left = 0
+      Height = 30
+      Top = 40
+      Width = 554
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 30
+      ClientWidth = 554
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 0
+        Height = 18
+        Top = 6
+        Width = 239
+        Align = alCustom
+        Caption = ' Data e hora de iníco da conferência:'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object lblDataHora: TLabel
+        Left = 241
+        Height = 18
+        Top = 6
+        Width = 95
+        Caption = 'Carregando...'
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object bbtnStatusDespesas: TBitBtn
+      Cursor = crHandPoint
+      Left = 280
+      Height = 40
+      Top = 0
+      Width = 139
+      Align = alLeft
+      Caption = 'STATUS'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Layout = blGlyphBottom
+      OnClick = bbtnStatusDespesasClick
+      ParentFont = False
+      ParentShowHint = False
+      TabOrder = 1
+    end
+    object bbtnCategoriaDespesas: TBitBtn
+      Cursor = crHandPoint
+      Left = 0
+      Height = 40
+      Hint = 'Manutenção de catego'
+      Top = 0
+      Width = 141
+      Align = alLeft
+      Caption = 'CATEGORIAS'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      OnClick = bbtnCategoriaDespesasClick
+      ParentFont = False
+      ParentShowHint = False
+      TabOrder = 2
+    end
+    object bbtnLancamentoDespesas: TBitBtn
+      Cursor = crHandPoint
+      Left = 419
+      Height = 40
+      Top = 0
+      Width = 139
+      Align = alLeft
+      Caption = 'LANÇAMENTOS'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      OnClick = bbtnLancamentoDespesasClick
+      ParentFont = False
+      TabOrder = 3
+    end
+    object bbtnReferenciaLancamentoDespesas: TBitBtn
+      Cursor = crHandPoint
+      Left = 141
+      Height = 40
+      Top = 0
+      Width = 139
+      Align = alLeft
+      Caption = 'REFERÊNCIA'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Layout = blGlyphBottom
+      OnClick = bbtnReferenciaLancamentoDespesasClick
+      ParentFont = False
+      TabOrder = 4
+    end
+  end
+  object TimerPrincipal: TTimer
+    OnTimer = TimerPrincipalTimer
+    left = 512
+    top = 40
+  end
+end

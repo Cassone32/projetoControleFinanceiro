@@ -1,0 +1,74 @@
+object DMPrincipal: TDMPrincipal
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 312
+  HorizontalOffset = 478
+  VerticalOffset = 271
+  Width = 566
+  PPI = 96
+  object ZConexaoPrincipal: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'controle_financeiro'
+    User = 'root'
+    Protocol = 'MariaDB-10'
+    left = 56
+    top = 8
+  end
+  object ZQueryStatus: TZQuery
+    Connection = ZConexaoPrincipal
+    Params = <>
+    left = 200
+    top = 8
+  end
+  object DataSourceStatus: TDataSource
+    DataSet = ZQueryStatus
+    left = 344
+    top = 8
+  end
+  object ZQueryAux: TZQuery
+    Connection = ZConexaoPrincipal
+    Params = <>
+    left = 56
+    top = 72
+  end
+  object ZQueryCategorias: TZQuery
+    Connection = ZConexaoPrincipal
+    Params = <>
+    left = 200
+    top = 72
+  end
+  object DataSourceCategorias: TDataSource
+    DataSet = ZQueryCategorias
+    left = 344
+    top = 72
+  end
+  object ZQueryReferencia: TZQuery
+    Connection = ZConexaoPrincipal
+    Params = <>
+    left = 200
+    top = 136
+  end
+  object DataSourceReferencia: TDataSource
+    DataSet = ZQueryReferencia
+    left = 344
+    top = 136
+  end
+  object ZQueryLancamentoReferencia: TZQuery
+    Connection = ZConexaoPrincipal
+    Params = <>
+    left = 200
+    top = 208
+  end
+  object DataSourceLancamentoReferencia: TDataSource
+    DataSet = ZQueryLancamentoReferencia
+    left = 344
+    top = 208
+  end
+end
